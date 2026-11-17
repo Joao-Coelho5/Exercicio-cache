@@ -3,7 +3,7 @@
 API em **Spring Boot 4** (JDK 21+) que serve conteúdos (artigos, posts, páginas) a partir de uma
 "fonte lenta" e usa um **cache feito à mão** com `ConcurrentHashMap` — sem `@Cacheable`, Caffeine ou Redis.
 
-**Dupla:** _(nomes aqui)_
+**Dupla:** João Pedro Coelho Guimarães
 
 ## Como rodar
 
@@ -106,6 +106,17 @@ done
    e busque de novo → MISS.
 5. **Estatísticas:** `curl localhost:8080/cache/estatisticas`
 
+   Nota sobre as estatísticas: o print de /cache/estatisticas foi tirado em uma execução separada da que gerou os logs de LRU. Como os contadores ficam em memória, reiniciar a aplicação zera hits, misses e evictions. Por isso o valor de evictions ali aparece como 0, enquanto os logs de remoção mostram as evictions da sequência de testes.
+
 ## Prints da demonstração
 
-_(adicionar aqui os prints do Postman/Insomnia e do log)_
+<img width="1568" height="362" alt="image" src="https://github.com/user-attachments/assets/9d14e0c9-0a4c-4cd1-95bb-53f5a9bbfe38" />
+<img width="1447" height="55" alt="image" src="https://github.com/user-attachments/assets/afb76849-26e9-4c74-9acf-c74a5be33f4c" />
+<img width="1568" height="251" alt="image" src="https://github.com/user-attachments/assets/d26b5dd9-21c2-4814-872d-7d9d4fe22795" />
+<img width="1568" height="300" alt="image" src="https://github.com/user-attachments/assets/3006ad51-732e-444c-b51a-a19bc50d434c" />
+<img width="1438" height="55" alt="image" src="https://github.com/user-attachments/assets/6e02cdd9-e1a9-4a01-9556-52e6882a82fc" />
+<img width="1568" height="386" alt="image" src="https://github.com/user-attachments/assets/4d49d1ea-4328-49e6-95e0-1c9107fd0b1f" />
+<img width="735" height="105" alt="image" src="https://github.com/user-attachments/assets/190e114e-426b-4784-ad3b-010ef69a948f" />
+<img width="1568" height="333" alt="image" src="https://github.com/user-attachments/assets/a1a1066e-d48d-43a1-9534-4fadee1c6917" />
+
+
